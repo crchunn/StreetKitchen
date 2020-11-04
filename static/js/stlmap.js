@@ -6,6 +6,20 @@
 //   accessToken: API_KEY
 // });
 
+// Store our API endpoint inside queryUrl
+var queryUrl = "https://opendata.arcgis.com/datasets/e5728d926a8a4a20ac511d3698f88917_0.geojson";
+
+// Perform a GET request to the query URL
+d3.json(queryUrl, function (data) {
+    console.log(data);
+    // Once we get a response, send the data.features object to the createFeatures function
+    createFeatures(data);
+
+
+
+});
+
+
 function givers(stlRestaurants) {
 
 
